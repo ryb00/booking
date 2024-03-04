@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Schedule
 
 # Create your views here.
-def book(request):
-    return HttpResponse("Hello")
+class ScheduleList(generic.ListView):
+    model = Schedule
+
 

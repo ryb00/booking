@@ -1,0 +1,326 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #c0c0c0;
+    font-family: 'Exo', sans-serif;
+}
+
+/* Header */
+
+header {
+    background-color: #830408;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #c0c0c0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 1rem;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c0c0c0;
+    font-size: 2rem;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu > li {
+    margin-bottom: 1em;
+}
+
+#logo:hover{
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+    text-decoration-color: #830408;
+    border-bottom-color: #830408;
+}
+
+#menu li a:hover {
+    color: white;
+    border-bottom: none;
+    text-decoration: none;
+}  
+
+.fa-bars:hover{
+    color: white;
+}
+
+.active {
+    border-bottom: 1px solid #c0c0c0;
+}
+
+nav {
+    position: absolute;
+    background-color: #830408;
+    width: 50%;
+    right: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #c0c0c0;
+    display: none;
+    top: 100%;
+}
+
+/* Hamburger-menu */
+
+#hamburger-menu:checked~nav {
+    display: block;
+}
+
+#hamburger-menu {
+    display: none;
+    width: 50%;
+}
+
+.hamburger-menu-label {
+    font-size: 2rem;
+}
+
+/* Main content */
+
+main {
+    background-color: #c0c0c0;
+    flex: 1 0 auto;
+    margin-top: 45px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.fa-sharp{
+    margin: auto;
+    margin-bottom: 20px;
+    }
+
+.text{
+    color: black;
+    margin: 70px;
+}
+
+.text-contact{
+    color: black;
+    font-weight: 300;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+hr{
+    background-color: #830408;
+    height: 3px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+/* Main images */
+
+#main-image {
+    height: 600px;
+    width: 100%;
+    background: url("../images/MainImage.png") no-repeat center center/cover;
+}
+
+#chefs-image{
+    height: 600px;
+    width: 100%;
+    background: url("../images/chefs.jpg") no-repeat center center/cover;
+}
+
+#contact-image{ 
+    height: 600px;
+    width: 100%;
+    background: url("../images/contact.jpg") no-repeat center center/cover;
+}
+
+/* Gallery page */
+
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
+}
+
+/* Team page */
+
+#chef-photo1, #chef-photo2{
+    width: 250px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+/* Contact page */
+
+.form-element{
+    margin-top: 30px;
+}
+
+.btn{
+    color: #c0c0c0;
+    background-color: #830408;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+    color: white;
+    background-color: #830408;
+}
+
+.center-form {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+.address, .phone{
+    list-style-type: none;
+    color: black;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+/* Footer */
+
+footer{
+    background-color: #830408;
+    color: #c0c0c0;
+    width: 100%;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #c0c0c0;
+}
+#social-networks i:hover {
+    color: white;
+}        
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .gallery{
+        display:none;
+    }
+
+    .hamburger-menu-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    .image-dish1 {
+        background: url("../images/image-dish1.jpg");
+    }
+    .image-dish2 {
+        background: url("../images/image-dish2.jpg");
+    }
+    .image-dish3 {
+        background: url("../images/image-dish3.jpg");
+    }
+    .image-dish4 {
+        background: url("../images/image-dish4.jpg");
+    }
+    .image-dish5 {
+        background: url("../images/image-dish5.jpg");
+    }
+    .image-dish6 {
+        background: url("../images/image-dish6.jpg");
+    }
+    .image-dish7 {
+        background: url("../images/image-dish7.jpg");
+    }
+    .image-dish8 {
+        background: url("../images/image-dish8.jpg");
+    }
+    .image-dish9 {
+        background: url("../images/image-dish9.jpg");
+    }
+    .image-dish10 {
+        background: url("../images/image-dish10.jpg");
+    }
+    .image-dish11 {
+        background: url("../images/image-dish11.jpg");
+    }
+    .image-dish12 {
+        background: url("../images/image-dish12.jpg");
+    }
+    .images > div {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 360px;
+        transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+    }
+
+    #chef-photo1, #chef-photo2{
+        width: 300px;
+
+   }
+}
