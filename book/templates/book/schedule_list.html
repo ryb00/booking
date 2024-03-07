@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +23,7 @@
     <!-- Title -->
     <title>restaurant Foodie</title>
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -62,6 +64,12 @@
                     <div class="col">
                         <h4 class="text-center text-contact">Contact us</h4>
                         <div class="center-form">
+                            <h1>Schedules list</h1>
+                            {% for schedule in object_list %}
+                            <h2>{{schedule.user}}</h2>
+                            <p>{{schedule.date_of_visit}}
+                            Time: {{schedule.time_of_visit}}</p>
+                            {% endfor %}
                             <form>
                                 <div class="form-element"><input type="text" name="name" id="fullname"
                                         class="form-control" placeholder="Name" required /></div>

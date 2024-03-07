@@ -4,6 +4,6 @@ from .models import Schedule
 
 # Create your views here.
 class ScheduleList(generic.ListView):
-    model = Schedule
-
+    queryset = Schedule.objects.all()
+    template_name = "book/schedule_list.html"
 
