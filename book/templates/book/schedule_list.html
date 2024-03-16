@@ -1,5 +1,9 @@
 {% load static %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,19 +36,21 @@
         <a href="index.html" style="text-decoration: none;">
             <h1 id="logo">restaurant Foodie</h1>
         </a>
-        <input type="checkbox" id="hamburger-menu" name="hamburger-menu">
-        <label for="hamburger-menu" class="hamburger-menu-label">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <nav>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="team.html">Our chefs</a></li>
-                <li><a href="gallery.html" class="gallery">Gallery</a></li>
-                <li><a href="contact.html" class="active">Contact us</a></li>
-                <li><a href="assets/menu/menu.pdf" target="_blank" class="cv-pdf">Menu</a></li>
-            </ul>
-        </nav>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_logout' %}">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_signup' %}">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_login' %}">Login</a>
+        </li>
+        {% endif %}
     </header>
 
     <!-- Main content -->
@@ -68,7 +74,7 @@
                             {% for schedule in object_list %}
                             <h2>{{schedule.user}}</h2>
                             <p>{{schedule.date_of_visit}}
-                            Time: {{schedule.time_of_visit}}</p>
+                                Time: {{schedule.time_of_visit}}</p>
                             {% endfor %}
                             <form>
                                 <div class="form-element"><input type="text" name="name" id="fullname"
