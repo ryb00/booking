@@ -30,8 +30,14 @@ class Schedule(models.Model):
     number_of_hours = models.IntegerField(choices = possible_number_of_hours)
     visitor = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
+
 
 class Number_of_tables_to_order(models.Model):
     visitor_number = models.IntegerField(unique=True)
     table_number = models.IntegerField()
+
+    def __str__(self):
+        return self.name
    

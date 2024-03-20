@@ -112,6 +112,7 @@ main {
     text-align: center;
     justify-content: center;
     width: 100%;
+    text-decoration-color: black;
 }
 
 .fa-sharp{
@@ -202,7 +203,7 @@ hr{
     max-width: 70%;
 }
 
-.address, .phone{
+.schedule, .address, .phone{
     list-style-type: none;
     color: black;
 }
