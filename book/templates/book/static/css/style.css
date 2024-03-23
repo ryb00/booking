@@ -45,30 +45,6 @@ h1 {
     font-size: 2rem;
 }
 
-#menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    list-style-type: none;
-}
-
-#menu > li {
-    margin-bottom: 1em;
-}
-
-#logo:hover {
-    color: white;
-    text-decoration: none;
-    border-bottom: none;
-    text-decoration-color: #830408;
-    border-bottom-color: #830408;
-}
-
-#menu li a:hover {
-    color: white;
-    border-bottom: none;
-    text-decoration: none;
-}
-
 .fa-bars:hover {
     color: white;
 }
@@ -86,21 +62,6 @@ nav {
     box-shadow: 0 2px 2px #c0c0c0;
     display: none;
     top: 100%;
-}
-
-/* Hamburger-menu */
-
-#hamburger-menu:checked ~ nav {
-    display: block;
-}
-
-#hamburger-menu {
-    display: none;
-    width: 50%;
-}
-
-.hamburger-menu-label {
-    font-size: 2rem;
 }
 
 /* Main content */
@@ -140,46 +101,11 @@ hr {
     margin-right: 150px;
 }
 
-/* Main images */
-
-#main-image {
-    height: 600px;
-    width: 100%;
-    background: url("../images/MainImage.png") no-repeat center center/cover;
-}
-
-#chefs-image {
-    height: 600px;
-    width: 100%;
-    background: url("../images/chefs.jpg") no-repeat center center/cover;
-}
-
 #contact-image {
     height: 600px;
     width: 100%;
     background: url("../images/contact.jpg") no-repeat center center/cover;
 }
-
-/* Gallery page */
-
-#photos img {
-    width: 100%;
-    line-height: 1em;
-}
-
-#photos {
-    line-height: 0;
-}
-
-/* Team page */
-
-#chef-photo1, #chef-photo2 {
-    width: 250px;
-    margin: auto;
-    padding-bottom: 30px;
-}
-
-/* Contact page */
 
 .form-element {
     margin-top: 30px;
@@ -261,56 +187,6 @@ footer {
         padding-left: 1rem;
     }
 
-    .gallery {
-        display: none;
-    }
-
-    .hamburger-menu-label {
-        display: none;
-    }
-
-    #logo {
-        font-size: 280%;
-        line-height: 75px;
-        margin: 0 0.5rem;
-    }
-
-    .image-dish1 {
-        background: url("../images/image-dish1.jpg");
-    }
-
-    .image-dish2 {
-        background: url("../images/image-dish2.jpg");
-    }
-
-    .image-dish3 {
-        background: url("../images/image-dish3.jpg");
-    }
-
-    .image-dish4 {
-        background: url("../images/image-dish4.jpg");
-    }
-
-    .image-dish5 {
-        background: url("../images/image-dish5.jpg");
-    }
-
-    .image-dish6 {
-        background: url("../images/image-dish6.jpg");
-    }
-
-    .image-dish7 {
-        background: url("../images/image-dish7.jpg");
-    }
-
-    .image-dish8 {
-        background: url("../images/image-dish8.jpg");
-    }
-
-    .image-dish9 {
-        background: url("../images/image-dish9.jpg");
-    }
-
     .image-dish10 {
         background: url("../images/image-dish10.jpg");
     }
@@ -322,22 +198,6 @@ footer {
     .image-dish12 {
         background: url("../images/image-dish12.jpg");
     }
-
-    .images > div {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 360px;
-        transition: all .5s ease-in-out;
-        -moz-transition: all .5s ease-in-out;
-        -webkit-transition: all .5s ease-in-out;
-    }
-
-    #chef-photo1, #chef-photo2 {
-        width: 300px;
-
-    }
-}
 
 .schedule-item {
     padding: 10px;
