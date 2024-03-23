@@ -1,8 +1,12 @@
-from . import views
+
 from django.urls import path
 
+from .views import ScheduleDeleteView, ScheduleList
+
 urlpatterns = [
-    path('', views.ScheduleList.as_view(), name='home'),
+    path('', ScheduleList.as_view(), name='schedule_list'),
+    path('schedule/<int:pk>/delete/', ScheduleDeleteView.as_view(), name='schedule_delete'),
+
 ]
 
 

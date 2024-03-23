@@ -55,7 +55,7 @@ h1 {
     margin-bottom: 1em;
 }
 
-#logo:hover{
+#logo:hover {
     color: white;
     text-decoration: none;
     border-bottom: none;
@@ -67,9 +67,9 @@ h1 {
     color: white;
     border-bottom: none;
     text-decoration: none;
-}  
+}
 
-.fa-bars:hover{
+.fa-bars:hover {
     color: white;
 }
 
@@ -90,7 +90,7 @@ nav {
 
 /* Hamburger-menu */
 
-#hamburger-menu:checked~nav {
+#hamburger-menu:checked ~ nav {
     display: block;
 }
 
@@ -115,17 +115,17 @@ main {
     text-decoration-color: black;
 }
 
-.fa-sharp{
+.fa-sharp {
     margin: auto;
     margin-bottom: 20px;
-    }
+}
 
-.text{
+.text {
     color: black;
     margin: 70px;
 }
 
-.text-contact{
+.text-contact {
     color: black;
     font-weight: 300;
     margin-top: 50px;
@@ -133,7 +133,7 @@ main {
     font-weight: 500;
 }
 
-hr{
+hr {
     background-color: #830408;
     height: 3px;
     margin-left: 150px;
@@ -148,13 +148,13 @@ hr{
     background: url("../images/MainImage.png") no-repeat center center/cover;
 }
 
-#chefs-image{
+#chefs-image {
     height: 600px;
     width: 100%;
     background: url("../images/chefs.jpg") no-repeat center center/cover;
 }
 
-#contact-image{ 
+#contact-image {
     height: 600px;
     width: 100%;
     background: url("../images/contact.jpg") no-repeat center center/cover;
@@ -173,7 +173,7 @@ hr{
 
 /* Team page */
 
-#chef-photo1, #chef-photo2{
+#chef-photo1, #chef-photo2 {
     width: 250px;
     margin: auto;
     padding-bottom: 30px;
@@ -181,18 +181,18 @@ hr{
 
 /* Contact page */
 
-.form-element{
+.form-element {
     margin-top: 30px;
 }
 
-.btn{
+.btn {
     color: #c0c0c0;
     background-color: #830408;
     margin-top: 15px;
     margin-bottom: 20px;
 }
 
-.btn:hover{
+.btn:hover {
     color: white;
     background-color: #830408;
 }
@@ -203,7 +203,7 @@ hr{
     max-width: 70%;
 }
 
-.schedule, .address, .phone{
+.schedule, .address, .phone {
     list-style-type: none;
     color: black;
 }
@@ -214,7 +214,7 @@ iframe {
 
 /* Footer */
 
-footer{
+footer {
     background-color: #830408;
     color: #c0c0c0;
     width: 100%;
@@ -233,9 +233,10 @@ footer{
     padding: 5%;
     color: #c0c0c0;
 }
+
 #social-networks i:hover {
     color: white;
-}        
+}
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -243,7 +244,7 @@ footer{
     h1 {
         font-size: 2.5rem;
     }
-    
+
     nav {
         display: block;
         position: relative;
@@ -260,8 +261,8 @@ footer{
         padding-left: 1rem;
     }
 
-    .gallery{
-        display:none;
+    .gallery {
+        display: none;
     }
 
     .hamburger-menu-label {
@@ -277,39 +278,51 @@ footer{
     .image-dish1 {
         background: url("../images/image-dish1.jpg");
     }
+
     .image-dish2 {
         background: url("../images/image-dish2.jpg");
     }
+
     .image-dish3 {
         background: url("../images/image-dish3.jpg");
     }
+
     .image-dish4 {
         background: url("../images/image-dish4.jpg");
     }
+
     .image-dish5 {
         background: url("../images/image-dish5.jpg");
     }
+
     .image-dish6 {
         background: url("../images/image-dish6.jpg");
     }
+
     .image-dish7 {
         background: url("../images/image-dish7.jpg");
     }
+
     .image-dish8 {
         background: url("../images/image-dish8.jpg");
     }
+
     .image-dish9 {
         background: url("../images/image-dish9.jpg");
     }
+
     .image-dish10 {
         background: url("../images/image-dish10.jpg");
     }
+
     .image-dish11 {
         background: url("../images/image-dish11.jpg");
     }
+
     .image-dish12 {
         background: url("../images/image-dish12.jpg");
     }
+
     .images > div {
         background-position: center;
         background-repeat: no-repeat;
@@ -320,8 +333,24 @@ footer{
         -webkit-transition: all .5s ease-in-out;
     }
 
-    #chef-photo1, #chef-photo2{
+    #chef-photo1, #chef-photo2 {
         width: 300px;
 
-   }
+    }
+}
+
+.schedule-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.schedule-details {
+    display: flex;
+    align-items: center;
+}
+
+.delete-form {
+    margin-left: 5px; /* Reduces space between the details and the "Delete" button */
+    flex-shrink: 0; /* Prevents the delete button from shrinking */
 }
