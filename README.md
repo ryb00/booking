@@ -4,7 +4,7 @@ This site is a restaurant reservation system.
 
 ## Site design
 
-! (/book/static/images/laptop.png)
+![](book/templates/book/static/images/laptop.png)
 
 # Features
 
@@ -12,21 +12,21 @@ This site is a restaurant reservation system.
 
 The site contains a list of the user's bookings.
 
-! (/book/static/images/your_booking.png)
+![](book/templates/book/static/images/your_booking.png)
 
 The user can delete his booking. A message is displayed to the user:
 
-! (/book/static/images/delete.png)
+![](book/templates/book/static/images/delete.png)
 
 ## Booking
 
 The user can book a table by specifying the date, time, number of people and number of hours:
 
-! (/book/static/images/booking.png)
+![](book/templates/book/static/images/booking.png)
 
 If there is no free table at the specified time and date, the user sees a message about this:
 
-! (/book/static/images/sorry.png)
+![](book/templates/book/static/images/sorry.png)
 
 If there is a free table, the reservation information is added to the reservation list.
 
