@@ -1,39 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# RESTAURANT FOODIE
 
-Welcome,
+This site is a restaurant reservation system.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Site design
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+! (/book/static/images/laptop.png)
 
-## Codeanywhere Reminders
+# Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## List of reservations
 
-`python3 -m http.server`
+The site contains a list of the user's bookings.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+! (/book/static/images/your_booking.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+The user can delete his booking. A message is displayed to the user:
 
-`http_server`
+! (/book/static/images/delete.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Booking
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The user can book a table by specifying the date, time, number of people and number of hours:
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+! (/book/static/images/booking.png)
 
-To log into the Heroku toolbelt CLI:
+If there is no free table at the specified time and date, the user sees a message about this:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+! (/book/static/images/sorry.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+If there is a free table, the reservation information is added to the reservation list.
 
----
+## Principle of booking accounting
 
-Happy coding!
+This accounting system contains 2 tables: Number_of_tables_to_order and Schedule.
+
+The Number_of_tables_to_order table contains two attributes:
+visitor_number (IntegerField, unique),
+table_number (IntegerField). 
+
+This table is filled out in the site admin panel by a restaurant employee. It indicates how many tables are needed for a group of guests.  If the order is for 4 people, then 1 table is enough for them, if the order is for 5 people, then 2 tables are needed.
+
+The Schedule table contains five attributes:
+date_of_visit (DateField),
+time_of_visit (TimeField),
+number_of_visitors (IntegerField),
+number_of_hours (IntegerField),
+visitor (ForeignKey, User).
+
+When making a reservation, data is first taken from the Number_of_tables_to_order table about how many tables are needed for the specified number of guests. Then the data on how many tables are already reserved for the specified time and date is taken from the Schedule table and the required number of tables is added to it. This number is compared with the total number of tables, which is specified by the AVAILABLE_TABLES constant and in this case is 10.
+
+# Testing
+
+The site was tested in the Chrome browser. No errors found.
+
+# Deployment
+
+The site was deployed to Heroku page.
+Link  https://booktable-25845d9db893.herokuapp.com/
+Superuser: login admin, password 12345678
+Github: https://ryb00.github.io/booking/
+
+# Credits
+
+The icons in the footer were taken from https://fontawesome.com/
+The favicon was taken from https://favicon.io/
+The images were taken from https://www.pexels.com/ and https://pixabay.com/
+Information when writing the code was taken from https://www.w3schools.com/, youtube.
+The website developed as part of the first assignment of this course was used.

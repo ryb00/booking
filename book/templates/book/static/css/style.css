@@ -179,14 +179,6 @@ footer {
         padding-right: 1rem;
     }
 
-    #menu {
-        display: flex;
-    }
-
-    #menu > li {
-        padding-left: 1rem;
-    }
-
     .image-dish10 {
         background: url("../images/image-dish10.jpg");
     }
@@ -213,4 +205,5 @@ footer {
 .delete-form {
     margin-left: 5px; /* Reduces space between the details and the "Delete" button */
     flex-shrink: 0; /* Prevents the delete button from shrinking */
+}
 }
